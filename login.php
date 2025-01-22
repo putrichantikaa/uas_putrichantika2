@@ -67,7 +67,7 @@ if(isset($_POST['tombol'])){
           <?=$pesan?>
             <div class="card">
             <div class="card-header text-center">
-                <h3>Sistem Informasi Mahasiswa</h3>
+                <h3>Manajemen Data Produk</h3>
             </div>
             <div class="card-body">
             <form method="post" action="login.php">

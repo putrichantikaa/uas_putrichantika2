@@ -44,7 +44,7 @@ $data = mysqli_fetch_array($edit);
     <input type="text" readonly value="<?=$data['id_kategori'] ?>" name="id_kategori" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Nama Jurusan</label>
+    <label for="exampleInputPassword1" class="form-label">Nama Kategori</label>
     <input type="text" value="<?=$data['nama_kategori'] ?>" name="nama_kategori" class="form-control" id="exampleInputPassword1">
   </div>
   <button type="submit" class="btn btn-primary">Update</button>

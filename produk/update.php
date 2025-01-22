@@ -1,24 +1,21 @@
 <?php
-#1. koneksikan file ini
+
 include("../koneksi.php");
 
-#2.  mengambil value dari form
-$id =$_POST["id"];
-$nidn =$_POST["nidn"];
-$nama =$_POST["nama"];
-$jabatan =$_POST["jabatan"];
-$email =$_POST["email"];
-$no_hp =$_POST["no_hp"];
+$id_produk = $_POST['id_produk'];
+$nama_produk = $_POST['nama_produk'];
+$harga = $_POST['harga'];
+$kategori_id = $_POST['kategori_id'];
+$gambar_produk = $_POST['gambar_produk'];
 
-#3. menulis query
-$sunting = "UPDATE dosens SET nidn='$nidn',nama='$nama',jabatan='$jabatan',email='$email',no_hp='$no_hp' WHERE id ='$id'";
+$sunting = "UPDATE produks SET nama_poduk='$nama_produk', harga='$harga',
+kategori_id='$kategori_id', gambar_produk='$gambar_produk' WHERE id_produk='$id_produk'";
 
-#4. jalankan query
-$proses = mysqli_query($koneksi,$sunting);
-
-#5. mengalihkan halaman
+$proses = mysqli_query($koneksi, $sunting);
+// untuk mengalihkan halaman diphp
 // header("location:index.php");
 ?>
+
 <script>
     document.location = "index.php";
 </script>

@@ -1,18 +1,19 @@
+
 <?php
 #1. koneksikan file ini
 include("../koneksi.php");
 
 #2.  mengambil value dari form
-$nim =$_POST["id_produk"];
-$nama =$_POST["nama_produk"];
-$tempat =$_POST["harga"];
-$tanggal =$_POST["kategori_id"];
+$nama_produk =$_POST["nama_produk"];
+$harga =$_POST["harga"];
+$kategori_id =$_POST["kategori_id"];
+$nama_katagori =$_POST["nama_kategori"];
 
 $nama_foto = $_FILES['foto']['name'];
 $tmp_foto = $_FILES['foto']['tmp_name'];
 
 #3. menulis query
-$simpan = "INSERT INTO produks (id_produk,nama_produk,harga,kategori_id) VALUES('$id_produk','$nama_produk','$harga','$kategori_id')";
+$simpan = "INSERT INTO produks (nama_produk,harga,kategori_id,nama_kategori) VALUES('$nama_produk','$harga','$kategori_id','$nama_katagori)";
 
 #4. jalankan query
 $proses = mysqli_query($koneksi, $simpan);
